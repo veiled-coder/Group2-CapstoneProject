@@ -1,0 +1,754 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+/* 
+
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+	#458c7e HEX 
+### Neutral
+
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%) */
+
+
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    display: grid;
+    /* grid-template-columns:  1fr repeat(3, 20rem) 1fr ; this is rigid, so that the 3 middle coloum can shrink when the screen is decreased */
+    grid-template-columns: 1fr repeat(3, minmax(min-content, 28rem)) 1fr;
+    grid-template-rows: 100vh repeat(10,max-content);
+    height: 100vh;
+
+    
+}
+html{
+    font-size: 112.5%;
+}
+
+header{
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    grid-column: 1/6; 
+    color: white;
+    /* font-family: 'Barlow', sans-serif; */
+    position: relative;
+
+    
+    
+}
+.MobileMenu{
+    display: none;
+}
+.header-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     /* font-family: 'Barlow', sans-serif; */
+     font-family: 'Barlow', sans-serif;
+     width: 100%;
+     margin-top: 3rem;
+    
+}
+.header-nav__p{
+    font-family: 'Barlow', sans-serif;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+
+}
+.navModaLogo-p,.navModaLogo-p2{
+    visibility: hidden; 
+    margin-right: 2rem;
+}
+
+.header-nav__links{
+    display: flex;
+    list-style: none;
+}
+.contact-link{
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 1.6rem;
+    padding: .8rem 1.2rem;
+    font-family: 'Fraunces', serif;
+    }
+    .contact-link:hover{
+        background-color:#6FCFFF;
+    }
+ul>li>a{
+    text-decoration: none;
+    margin: 2rem;
+    color: white;
+}
+.header-hero__div{
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    letter-spacing: .6rem;
+    word-spacing: .5rem;
+    margin-top: 10rem;
+    
+    
+}
+.header-hero__text{
+    font-weight: 900;
+}
+
+.header-hero__img{
+    position: absolute;
+    top: 23rem;
+    
+}
+/* styling the information section (transform,standout,graphics & photography */
+
+.info-section{
+grid-column:1/-1 ; 
+grid-row: 2/3;
+display: grid;
+/* grid-template-columns: repeat(2,1fr);  instead of explicity writting 2,let me leave grid to figure out i need 2 coloumn*/
+grid-template-columns: repeat(auto-fit,minmax(40rem,1fr)); 
+background-color: white;
+}
+
+.info-box,.info-box2,.info-box3{
+    height: 38rem;
+    
+}
+
+/* Images wont fit in a column directly due to their intrisic nature. since a div tag usually will fit the container 100% width,
+ we put the images in a Div tag and give them the width of 100% which will be 
+referenced to the Div */
+.info-img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+ 
+ 
+/* styling the infomation section (transform text,standout text) */
+.transformDiv,.standoutDiv{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    padding-top: 7rem;
+    padding-right: 5rem;
+    padding-bottom:7rem ;
+    padding-left: 7rem;
+    
+    
+    
+}
+.info-h2{
+   visibility: visible;
+   font-size: 2.4rem;
+   font-weight: 900;
+   font-family: 'Fraunces', serif; 
+   
+}
+.info-h2__mobile,.info-p__mobile{
+    display: none;
+}
+ .info-h2>span{
+    display: block;
+    
+} 
+
+.info-p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    
+}
+.info-p__1{
+    display: flex;
+    flex-direction: column;
+
+}
+.learnMore{
+    width: auto;
+    font-weight:900;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    font-family: 'Fraunces', serif; 
+     margin-left: .5rem; 
+}
+.learnMore::after{
+   
+    content: "";
+    display: block;
+    width:8.5rem;
+    height: .4rem;
+    margin-top: -.4rem;
+    
+    border-radius: .3rem;
+}
+
+.learnMore-Transform::after{
+
+    background-color:hsla(51, 93%, 52%, 0.705);
+}
+
+.learnMore-Transform:hover::after{
+    background-color: yellow;
+}
+.learnMore-Standout::after{
+ background-color:   #fdbdb698;
+    
+}
+.learnMore-Standout:hover::after{
+    background-color:#cc3813c5;
+}
+
+
+/* styling the photography and the graphics  */
+.photographyDiv{
+    background-image: url(./images/desktop/image-photography.jpg);
+    
+}
+
+.graphicsDiv{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+   
+}
+.graphicsDiv,.photographyDiv{
+    background-repeat: no-repeat;
+    background-size: cover;  
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: top;
+  
+} 
+.photographyDiv--2,.graphicsDiv--2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 3rem;
+    
+}
+.photographyDiv--2{
+    color: hsl(198, 62%, 26%);
+}
+.graphicsDiv--2{
+   color: hsl(167, 40%, 24%);
+}
+h3{
+    
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 2rem;
+}
+.info-p__2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* styling the  testimonials section */
+.testimonials-title{
+    text-transform: uppercase;
+    word-spacing: .5rem;
+    letter-spacing: .2rem;
+    color: hsl(232, 10%, 55%);
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    grid-column: 3/4;
+    justify-self: center;
+    margin-top: 10rem;
+
+    
+}
+.testimonials{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,min-content));
+    grid-gap: 1rem;
+    justify-items: center; 
+    align-items: center;
+    grid-gap: 4rem;
+    padding-top: 9rem;
+    
+} 
+
+
+.clients{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+.clients>*{
+    padding-bottom: 4rem;
+}
+
+
+.client-img{
+    border-radius: 50%;
+    height: 5rem;
+    object-fit: cover;
+    width: auto;
+}
+.testimonialText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(213, 9%, 39%);
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.5rem;
+
+}
+.clientInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clientName{
+    font-weight: bolder;
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+
+}
+.clientJob{
+    font-family: 'Barlow', sans-serif;
+    color: hsl(210, 4%, 67%);
+    
+    
+}
+/* styling the gallery */
+
+.gallery{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,min-content));
+    margin-top: 6rem;
+    
+}
+.galleryImgDiv{
+    height: 30rem;
+    width: 26.45rem;
+}
+
+.galleryImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* styling the footer*/
+footer{
+     grid-column: 1/-1;
+     background-color: #90D4C5  ;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.footer-div{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    justify-content: center;
+    
+}
+/* styling the sunny logo */
+
+
+/* styling the link texts */
+
+.footer-nav{
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.footer-nav__ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: 'Barlow', sans-serif;
+    
+
+}
+.footer-nav__ul>li>a{
+    color: hsl(168, 34%, 41%);
+    font-weight: 600;
+    font-size: 1rem;
+}
+/* styling the svg icons */
+.sunnylogo{
+  width: 10rem; 
+filter: invert(52%) sepia(55%) saturate(335%) hue-rotate(118deg) brightness(83%) contrast(87%);
+  
+  
+}
+
+.footer-socialIcons{
+    padding-top: 6rem;
+}
+.footer-socialIcon{
+    margin: 0 1rem;
+    
+}
+.footerHover:hover{   
+filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(13deg) brightness(101%) contrast(10000%);
+}
+
+
+/* MEDIA QUERY AT 1440PX */
+
+@media screen and (max-width: 1440px) {
+    *,*::before,*::after{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    html{
+        font-size: 112.5%;
+    }
+    
+
+header{
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.header-nav-logo{
+    width: 10rem;
+    height: auto;
+}
+.header-hero__img{
+        top: 22rem;
+}
+.header-hero__text{
+    letter-spacing: .2rem;
+}
+    
+.header-hero__div{
+    margin-top: 7rem;
+}
+.span-mobile{
+    display: none;
+}
+.info-h2__mobile,.info-p__mobile{
+    visibility: hidden;
+}
+.testimonials{
+    grid-template-columns: repeat(auto-fit,minmax(20rem,min-content));
+    margin-left: 6rem;
+    margin-top: -2rem;
+}
+
+.gallery{
+    
+    grid-template-columns: repeat(auto-fit,minmax(15rem,min-content));
+    
+    
+}
+.galleryImgDiv{
+    width: 20rem;
+}
+
+}
+
+/* media query at 375 px */
+@media screen and (max-width: 375px){
+ html{
+     font-size: 45%;
+ }
+
+body{
+
+
+    grid-template-rows: 60vh repeat(5,minmax(max-content,min-content));
+    
+
+    
+}
+/* STYLING THE HEADER */
+header{
+    background-image: url(./images/mobile/image-header.jpg);
+
+}
+ .header-nav{
+     margin-top: 5rem;
+ }
+ .header-nav__links{
+     display: none;
+ }
+ .header-nav-logo{
+     width: 15rem;
+ }
+
+.header-hero__div{
+    margin-top: 15rem;
+}
+.header-hero__text{
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 1rem;
+    letter-spacing: 1rem;
+}
+.header-hero__img{
+    top: 39rem;
+}
+
+ .navModaLogo-p{
+     visibility: visible;
+ }
+ .navModaLogo-p{
+     position: absolute;
+     left: 45rem;
+}
+/* FTYLING THE MOBILE MENU */
+.MobileMenu{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 40rem;
+    position: absolute;
+    top: 15rem;
+    left: 3.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;  
+    z-index: 7;  
+    clip-path: polygon(3%,4% ,100%,7%);
+}
+.MobileMenu:target{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+.MobileMenu-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+}
+
+ .MobileMenu-links>li>.menulink{
+     font-size: 2rem;
+     color: hsl(232, 10%, 55%) ;
+     font-weight: 600;
+     font-family: 'Barlow', sans-serif;
+ }
+ .MobileMenu-links>li>.menulink-contact{
+     font-size: 2rem;
+     text-transform: uppercase;
+     color: hsl(213, 9%, 39%);
+     font-family: 'Fraunces', serif; 
+     background-color: #F7DB0E;
+     height: 4rem;
+     padding: 2rem;
+     border-radius: 3.3rem;
+     font-weight: 900;
+ }
+ 
+
+/* THE INFO SECTION */
+
+.eggImgDiv{
+    grid-row: 1/2;
+}
+.info-box{
+    height: 90rem;
+    
+}
+/* The (transform and standout box) and (egg & cup) section now have a smaller height, 
+compared to the desktop view where all boxes in the info section have
+same height,Here the new height is given a class of .info-box2 (transform & standout box)
+& info-box3 (egg &cup)
+ */
+ .info-box2{
+    height: 70rem;
+}
+.info-box3{
+    height: 50rem;
+}
+.transformDiv,.standoutDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+.info-h2,.info-p{
+    display: none;
+}
+.info-h2__mobile,.info-p__mobile,.info-p__2{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.info-h2__mobile{
+    font-size: 4.7rem;
+    font-weight: 900;
+    font-family: 'Fraunces', serif; 
+}
+
+.info-p__mobile{
+    color: hsl(213, 9%, 39%);
+    font-size: 2.5rem;
+    font-family: 'Barlow', sans-serif;
+    line-height: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+     
+}
+.learnMore{
+  font-size: 2.5rem;
+  width: auto;
+}
+.learnMore::after{
+    width: 105%;
+    height: 1rem;
+    margin-left: -.3rem;
+    margin-top: -1rem;
+}
+/* STYLING THE GRAPHICS AND PHOTGRAPHY SECTION */
+.graphicsDiv{
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+}
+.photographyDiv{
+    background-image: url(./images/mobile/image-photography.jpg);
+}
+.graphicsDiv--2,.photographyDiv--2{
+    margin-bottom: 10rem;
+}
+
+h3{
+    font-size: 3.8rem;
+    margin-bottom: 4rem;
+}
+.info-p__2{
+    font-size: 2.2rem;
+    line-height: 4rem;
+    font-family: 'Barlow', sans-serif;
+}
+/* STYLING THE TESTIMONIALS */
+.testimonials{
+ margin: 0 auto; 
+ grid-column: 1/-1;
+ display: block;
+ padding-top: 5rem;
+    
+} 
+.testimonials-title{
+    font-size: 3rem;
+    grid-column: 1/-1;
+}
+.clients{
+    margin-top: 5rem;
+}
+.client-img{
+    width: 10rem;
+    height: 10rem;
+}
+.testimonialText{
+    font-size: 2.5rem;
+    line-height: 4rem;
+    margin-top: 0rem;
+}
+.clientName,.clientJob{
+    font-size: 2rem;
+}
+
+/* STYLING THE GALLERY */
+.gallery{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    margin-top: 6rem;
+    
+}
+.galleryImgDiv{
+    height: 23rem;
+    width: 26.05rem;
+}
+/* STYLING THE FOOTER */
+
+.footer-div{
+    grid-column: 1/-1;
+}
+.footer-nav__ul{
+    justify-content: space-around;
+}
+.footer-nav__ul>li>a{
+    font-size: 2.5rem;
+}
+.sunnylogo{
+    width: 25rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.footer-socialIcons{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+}
+
+
+
+
+
+
+
+
+
+

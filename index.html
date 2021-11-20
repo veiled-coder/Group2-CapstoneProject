@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="sunny.css">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+   </style>
+</head>
+
+
+
+
+<body class="Container">                 <!--THE OVERALL CONTAINER-->
+
+
+                                         <!-- THE HEADER SECTION -->
+
+<header>
+<!-- MOBILE MENU VIEW (VISBILITY IS HIDDEN ON THE DESKTOP VIEW)--> 
+
+
+<div class="MobileMenu" id="ModalOpen">
+  <ul class="MobileMenu-links">
+    <li class="MobileMenu-link"><a href="" class="menulink">About</a></li>
+    <li class="MobileMenu-link"><a href="" class="menulink">Services</a></li>
+    <li class="MobileMenu-link"><a href="" class="menulink">Projects</a></li>
+    <li class="MobileMenu-link"><a href="" class="menulink-contact">Contact</a></li>
+  </ul>
+</div>
+
+
+<!-- MOBILE MENU ENDS HERE -->
+
+
+                                              <!--HEADER SECTION FULL DIV -->
+
+<div class="header-div"> <!--this is the parent container for the items in the header menu because we need to set its display to 'flex' 
+                         Another option is directly using the header tag as the flex-container but since our header is already a grid-item,
+                         to avoid conflict when display is set to 'flex',we created a new flex-container called "header-div"-->
+
+<nav class="header-nav"> <!-- This represents the navigation menu* --> 
+<p class="header-nav__p"><img src="./images/logo.svg" class="header-nav-logo"></p>
+<p class="navModaLogo-p"><a href="#ModalOpen"><img src="./images/icon-hamburger.svg" class="navModaLogo"></a></p> <!--This is the Mobile Menu logo which when clicked, will open our Mobile menu 
+                                                                                                                    because the href="#ModalOpen" will target the menu and display it when clicked on
+                                                                                                                    NB! THE DISPLAY ON DESKTOP VIEW IS "HIDDEN" AND ON MOBILE IS "VISIBLE"--> 
+
+
+<ul class="header-nav__links">
+     <li class="link1"><a href="#" class="xl:m-8">About</a></li>
+     <li class="link2"><a href="#" class="xl:m-8">Services</a></li>
+     <li class="link3"><a href="#" class="xl:m-8">Projects</a></li>
+     <li class="link4"><a href="#" class="xl:m-8 contact-link">CONTACT</a></li>
+</ul>
+</nav>
+
+<div class="header-hero__div">
+<h1 class="header-hero__text">WE ARE <span>CREATIVES</h1> 
+</div>
+
+<div class="header-hero__img">
+<img src="./images/icon-arrow-down.svg" class="hero-arrow">
+</div>
+
+</div>
+
+
+</header>
+
+
+
+                                                   <!-- THE INFORMATION SECTION -->
+
+<section class="info-section"> <!-- All parent Divs have a class called 'info-box' set to a specific height so that the child elements
+                               of the divs can have reference height for easy styling. For example, Images wont fit in a grid area accurately i.e they may overlap
+                               the grid area or fall short due to their intrisic nature. since a div tag usually will fit the grid-area and can be assigned a height,
+                               we put the images in a Div tag and give them the width of 100%  which will be referenced to the 'box' which is the parent div */ -->
+<div class="info-box2">
+  
+<div class="transformDiv">
+      <!-- FOR DESKTOP VIEW -->
+  <h2 class="info-h2">Transform your <span> brand </span> </h2>
+  <p class="info-p info-p__1">We are a full-service creative agency specializing <span> in helping brands grow fast. 
+  Engage your clients through </span>compelling visuals that do most of the marketing for you.
+  </p>
+  <p>
+  <!-- FOR MOBILE VIEW -->
+  <h2 class="info-h2__mobile">Transform your <span> brand </span> </h2>
+  <p class=" info-p__mobile">We are a full-service creative agency <span> specializing in helping brands grow fast. </span>
+  Engage your clients through compelling<span> visuals that do most of the marketing for</span> you.</span>
+  </p>
+
+  <p class="learnMore-p"><a href="#" class="learnMore learnMore-Transform"> Learn more</a></p>
+</div>
+</dIv>
+  
+
+  
+
+<div class="info-box3 eggImgDiv">
+<img src="./images/desktop/image-transform.jpg" class="eggImg info-img">
+</div>
+
+
+
+<div class="cupDiv info-box3  ">
+<img src="./images/desktop/image-stand-out.jpg" class="cupImg info-img">
+</div>
+
+
+
+<div class="info-box2">
+<div class="standoutDiv">
+                         <!-- Sice the layout of the text is differnt on both screen sizes, 
+                         we created the Mobile view too,then we will make the visbility hidden on a desktop -->
+ 
+<!-- FOR DESKTOP VIEW-->
+<h2 class="info-h2"> Stand out to the right <span>audience</span> </h2> 
+<p class="info-p info-p__1">Using a collaborative formula of designers,researchers,<span> photographers, videographers, and copywriters, we’ll</span> build and extend your brand in digital places. </p>
+ 
+<!--FOR MOBILE VIEW-->
+<h2 class="info-h2__mobile info-h2__mobile2"> Stand out to the<span> right audience</span> </h2> 
+<p class="info-p__mobile">Using a collaborative formula of <span>designers,researchers,photographers,</span> videographers, and copywriters, we’ll<span> build and extend your brand in digital </span>places.</p>
+
+<p class="learnMore-p"><a href="#" class="learnMore learnMore-Standout">Learn more</a> </p>
+
+</div>
+</div>
+
+
+
+<div class="info-box">
+<div class="graphicsDiv">
+
+  <div class="graphicsDiv--2">
+  <h3> Graphic Design</h3>
+  <p class="info-p info-p__2">Great design makes you memorable. We deliver <span> artwork that underscores your brand message</span>  and captures potential clients’ attention.</p>
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="info-box">
+<div class="photographyDiv">
+
+  <div class="photographyDiv--2">
+  <h3>Photography</h3>
+  <p class="info-p info-p__2"> Increase your credibility by getting the most <span>stunning, high-quality photos that improve your </span>business image.</span></p>
+  </div>
+
+</div>
+</div>
+
+</section>
+
+
+
+
+
+                                             <!-- THE TESTIMONIALS SECTION -->
+
+<div class="testimonials-title"><h4>Client testimonials</h4></div>
+
+
+<section class="testimonials">                                             
+<div class="client-1 clients">
+  <div><img src="./images/image-emily.jpg" class="client-img"></div>
+  <p class="testimonialText">We put our trust in Sunnyside and they <span>delivered, making sure our needs were met</span> deadlines were always hit.</p>
+  <div class="clientInfo">
+  <p class="clientName">Emily R.</p>
+  <p class="clientJob">Marketing Director</p>
+  </div>
+</div> 
+
+<div class="client-2 clients">
+  <div><img src="./images/image-thomas.jpg" class="client-img"></div>
+  <p class="testimonialText">Sunnyside’s enthusiasm coupled with <span>keen interest in our brand’s success made it</span>a satisfying and enjoyable experience.</p>
+  <div class="clientInfo">
+  <p class="clientName">Thomas S.</p>
+  <p class="clientJob">Chief Operating Officer</p>
+</div>
+</div> 
+
+<div class="client-3 clients">
+  <div><img src="./images/image-jennie.jpg " class="client-img" ></div>
+  <p class="testimonialText">Incredible end result! Our sales increased <span>over 400% when we worked with Sunnyside.</span> Highly recommended!</p>
+  <div  class="clientInfo">
+  <p class="clientName">Jennie F.</p>
+  <p class="clientJob">Business Owner</p> 
+  </div>
+</div>
+
+</section>
+
+<!-- the gallery section -->
+<section class="gallery">
+<div class="galleryImgDiv"><img src="./images/desktop/image-gallery-milkbottles.jpg" alt="" class="galleryImg"></div>
+<div class="galleryImgDiv"><img src="./images/desktop/image-gallery-orange.jpg" alt="" class="galleryImg"></div>
+<div class="galleryImgDiv"><img src="./images/desktop/image-gallery-cone.jpg" alt="" class="galleryImg"></div>
+<div class="galleryImgDiv"><img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="" class="galleryImg"></div>
+</section> 
+
+<!-- the footer section -->
+<footer>
+<div class="footer-div"> <!--this div encloses all the footer elements-->
+
+  <div class="Sunnylogo-div">
+    <img src="./images/logo.svg" class="sunnylogo">
+ </div>
+
+  <div class="footer-nav">
+    <ul class="footer-nav__ul ">
+      <li class="footer-nav__links"><a href="#" class="footerHover">About</a></li>
+      <li class="footer-nav__links"><a href="#" class="footerHover">Services</a></li>
+      <li class="footer-nav__links"><a href="#" class="footerHover">Projects</a></li>
+    </ul>
+  </div>
+  <div class="footer-socialIcons ">
+   <img src="./images/icon-facebook.svg" class="footer-socialIcon footerHover">
+    <img src="./images/icon-instagram.svg" class="footer-socialIcon footerHover">
+    <img src="./images/icon-twitter.svg" class="footer-socialIcon footerHover">
+    <img src="./images/icon-pinterest.svg" class="footer-socialIcon footerHover">
+  </div>
+
+
+</div>
+</footer>  
+ <div class="attribution"> 
+ Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+Coded by <a href="#">GROUP 2 CAPSTONE PROJECT</a>.
+</div> -
+
+
+
+</body>
+</html>
