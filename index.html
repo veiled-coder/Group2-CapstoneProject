@@ -14,11 +14,7 @@
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-   </style>
+ 
 </head>
 
 
@@ -30,10 +26,11 @@
                                          <!-- THE HEADER SECTION -->
 
 <header>
+
 <!-- MOBILE MENU VIEW (VISBILITY IS HIDDEN ON THE DESKTOP VIEW)--> 
+<section class="MobileMenu-section">
 
-
-<div class="MobileMenu" id="ModalOpen">
+<div id="MobileMenu">
   <ul class="MobileMenu-links">
     <li class="MobileMenu-link"><a href="" class="menulink">About</a></li>
     <li class="MobileMenu-link"><a href="" class="menulink">Services</a></li>
@@ -42,23 +39,24 @@
   </ul>
 </div>
 
+<div class="Mobilelogo"><img src="./images/icon-hamburger.svg" id="Menulogo1"></div>
+<div class="Mobilelogo"><img src="./images/icon-hamburger.svg" id="Menulogo2"></div>
+
+</section>
 
 <!-- MOBILE MENU ENDS HERE -->
 
 
-                                              <!--HEADER SECTION FULL DIV -->
+                                              <!--HEADER SECTION  DESKTOP VIEW FULL DIV -->
 
 <div class="header-div"> <!--this is the parent container for the items in the header menu because we need to set its display to 'flex' 
                          Another option is directly using the header tag as the flex-container but since our header is already a grid-item,
                          to avoid conflict when display is set to 'flex',we created a new flex-container called "header-div"-->
 
-<nav class="header-nav"> <!-- This represents the navigation menu* --> 
-<p class="header-nav__p"><img src="./images/logo.svg" class="header-nav-logo"></p>
-<p class="navModaLogo-p"><a href="#ModalOpen"><img src="./images/icon-hamburger.svg" class="navModaLogo"></a></p> <!--This is the Mobile Menu logo which when clicked, will open our Mobile menu 
-                                                                                                                    because the href="#ModalOpen" will target the menu and display it when clicked on
-                                                                                                                    NB! THE DISPLAY ON DESKTOP VIEW IS "HIDDEN" AND ON MOBILE IS "VISIBLE"--> 
+<nav class="header-nav">  
 
-
+<img src="./images/logo.svg" class="header-logo"> 
+                                                                                                            
 <ul class="header-nav__links">
      <li class="link1"><a href="#" class="xl:m-8">About</a></li>
      <li class="link2"><a href="#" class="xl:m-8">Services</a></li>
@@ -67,6 +65,7 @@
 </ul>
 </nav>
 
+<!-- HEADER HERO TEXT -->
 <div class="header-hero__div">
 <h1 class="header-hero__text">WE ARE <span>CREATIVES</h1> 
 </div>
@@ -75,9 +74,8 @@
 <img src="./images/icon-arrow-down.svg" class="hero-arrow">
 </div>
 
+
 </div>
-
-
 </header>
 
 
@@ -240,12 +238,9 @@
 
 </div>
 </footer>  
- <div class="attribution"> 
- Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-Coded by <a href="#">GROUP 2 CAPSTONE PROJECT</a>.
-</div> -
+ 
 
-
-
+<script src="sunny.js"></script>
 </body>
+
 </html>
