@@ -33,7 +33,7 @@ body{
     display: grid;
     /* grid-template-columns:  1fr repeat(3, 20rem) 1fr ; this is rigid, so that the 3 middle coloum can shrink when the screen is decreased */
     grid-template-columns: 1fr repeat(3, minmax(min-content, 28rem)) 1fr;
-    grid-template-rows: 100vh repeat(10,max-content);
+    grid-template-rows: 100vh;
     height: 100vh;
 
     
@@ -126,8 +126,7 @@ ul>li>a{
 grid-column:1/-1 ; 
 grid-row: 2/3;
 display: grid;
-/* grid-template-columns: repeat(2,1fr);  instead of explicity writting 2,let me leave grid to figure out i need 2 coloumn*/
-grid-template-columns: repeat(auto-fit,minmax(40rem,1fr)); 
+grid-template-columns: repeat(2,1fr); 
 background-color: white;
 }
 
@@ -294,11 +293,10 @@ h3{
 .testimonials{
     grid-column: 2/5;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(25rem,min-content));
-    grid-gap: 1rem;
+    /* grid-template-columns: repeat(auto-fit,minmax(25rem,min-content)); */
+    grid-template-columns: repeat(3,1fr);
     justify-items: center; 
     align-items: center;
-    grid-gap: 4rem;
     padding-top: 9rem;
     
 } 
@@ -357,13 +355,13 @@ h3{
 .gallery{
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(25rem,min-content));
+    grid-template-columns: repeat(4,1fr);
     margin-top: 6rem;
     
 }
 .galleryImgDiv{
     height: 30rem;
-    width: 26.45rem;
+    width: 100%;
 }
 
 .galleryImg{
@@ -440,10 +438,6 @@ filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(13deg) brightness(101%) c
 
 
 
-
-
-
-
 /* MEDIA QUERY AT 1440PX */
 
 @media screen and (max-width: 1440px) {
@@ -482,25 +476,10 @@ header{
 .info-h2__mobile,.info-p__mobile{
     visibility: hidden;
 }
-.testimonials{
-    grid-template-columns: repeat(auto-fit,minmax(20rem,min-content));
-    margin-left: 6rem;
-    margin-top: -2rem;
-}
-
-.gallery{
-    
-    grid-template-columns: repeat(auto-fit,minmax(15rem,min-content));
-    
-    
-}
-.galleryImgDiv{
-    width: 20rem;
-}
-
-}
 
 
+
+}
 
 
 
@@ -509,10 +488,7 @@ header{
  html{
      font-size: 45%;
  }
- body{
-      overflow-x: hidden; 
-      
-  } 
+ 
 
 /* STYLING THE HEADER */
 header{
@@ -612,6 +588,12 @@ header{
 
 /* THE INFO SECTION */
 
+
+.info-section{
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr;
+    }
 .eggImgDiv{
     grid-row: 1/2;
 }
@@ -624,7 +606,7 @@ compared to the desktop view where all boxes in the info section have
 same height,Here the new height is given a class of .info-box2 (transform & standout box)
 & info-box3 (egg &cup)
  */
- .info-box2{
+.info-box2{
     height: 70rem;
 }
 .info-box3{
@@ -727,10 +709,7 @@ h3{
      grid-column: 1/-1; 
     display: grid;
     grid-template-columns:repeat(2,1fr);
-    margin-top: 6rem;
-
-    
-    
+    margin-top: 6rem;   
 }
 .galleryImgDiv{
     height: 23rem;
@@ -742,6 +721,8 @@ width: 100%;
 height: 100%;
 display: block;
 }
+
+
 /* STYLING THE FOOTER */
 
 .footer-div{
