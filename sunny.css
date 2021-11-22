@@ -509,6 +509,9 @@ header{
  html{
      font-size: 45%;
  }
+ body{
+     overflow-x: hidden;
+ }
 
 /* STYLING THE HEADER */
 header{
@@ -556,7 +559,7 @@ header{
     clip-path: polygon(3%,4% ,100%,7%);
     visibility: hidden;
     z-index: 4;
-   transition: 4s;
+   /* transition: .1s; */
 }
 
 #Menulogo1{
