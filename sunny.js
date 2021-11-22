@@ -4,12 +4,12 @@ let modal=document.getElementById("MobileMenu");
 
 // This means when the logo on top (zindex 6) is clicked, then it should hide
 menulogo1.onclick=function(){
-    modal.style.visibility="visible";
-    menulogo1.classList.add('hidden')
+    modal.style.visibility= "visible";
+    menulogo1.classList.add('hidden');
 }
 // And when the logo on top now (zindex 5) which was behind before,when clicked, the former should show
 menulogo2.onclick=function(){
-    modal.style.visibility="hidden";
-    menulogo1.classList.remove('hidden')
+    modal.style.visibility= "hidden";
+    menulogo1.classList.remove('hidden');
      
-}mmm
+}
