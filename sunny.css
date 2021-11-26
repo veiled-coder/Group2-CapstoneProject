@@ -526,10 +526,25 @@ header{
     position: absolute;
     top: 15rem;
     left: 4rem;  
-    clip-path: polygon(3%,4% ,100%,7%);
     visibility: hidden;
     z-index: 4;
    /* transition: .1s; */
+}
+.MobileMenu-Div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.MobileMenu-Div::after{
+    content: "";
+    border-width: 3rem;
+    
+    border-color:transparent white white transparent;
+    border-style: solid;
+    position: absolute;
+    bottom: 100%;
+    left: 87%;
 }
 
 #Menulogo1{
@@ -555,13 +570,17 @@ header{
 .MobileMenu-links{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 6rem;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+   
 }
 
  .MobileMenu-links>li>.menulink{
-     font-size: 2rem;
+     font-size: 2.5rem;
      color: hsl(232, 10%, 55%) ;
      font-weight: 600;
      font-family: 'Barlow', sans-serif;
